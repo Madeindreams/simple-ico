@@ -1,0 +1,26 @@
+{
+    "name": "erc20-decntralized-traceability",
+    "version": "1.0.0",
+    "description": "Madeindreams Decentralized Traceability App",
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "server": "lite-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://https://github.com/Madeindreams/AGC.git"
+    },
+    "keywords": [],
+    "author": "Ian Dorion <admin@madeindreams.ca> (https://madeindreams.ca)",
+    "license": "MIT",
+    "private": true,
+    "bugs": {},
+    "homepage": "https://github.com/Madeindreams/ERC20Token.git",
+    "devDependencies": {
+        "lite-server": "git+https://github.com/Madeindreams/lite-server.git"
+    },
+    "dependencies": {}
+}
