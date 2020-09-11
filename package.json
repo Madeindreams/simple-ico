@@ -22,5 +22,7 @@
     "devDependencies": {
         "lite-server": "git+https://github.com/Madeindreams/lite-server.git"
     },
-    "dependencies": {}
+    "dependencies": {
+        "web3": "^1.2.11"
+    }
 }

@@ -1,5 +1,5 @@
-const ERC20Token = artifacts.require("ERC20Token");
-const ERC20TokenSale = artifacts.require("ERC20TokenSale");
+const ERC20Token = artifacts.require("ERC20Token.sol");
+const ERC20TokenSale = artifacts.require("ERC20TokenSale.sol");
 
 module.exports = function(deployer) {
     ///// Deploy Contract, Total Supply

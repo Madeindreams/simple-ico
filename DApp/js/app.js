@@ -15,7 +15,7 @@ App = {
 
     initWeb3: function(){
         if (typeof web3 !== 'undefined'){
-            // if a web2 instance is already provided by MetaMask
+            // if a web3 instance is already provided by MetaMask
             App.web3Provider = web3.currentProvider;
             ethereum.autoRefreshOnNetworkChange = false;
             web3 = new Web3(web3.currentProvider);
@@ -31,18 +31,18 @@ App = {
         return App.initContracts();
     },
     initContracts: function() {
-        $.getJSON("tokenSale.json", function(tokenSale){
+        $.getJSON("erc20TokenSale.json", function(tokenSale){
             App.contracts.tokenSale = TruffleContract(tokenSale);
             App.contracts.tokenSale.setProvider(App.web3Provider);
             App.contracts.tokenSale.deployed().then(function(tokenSale){
-                console.log("AGCT Token Sale Address: ",tokenSale.address);
+                console.log("MIDT Contract Adress: ",tokenSale.address);
             });
         }).done(function(){
-                $.getJSON("agcToken.json", function(agcToken){
+                $.getJSON("erc20Token.json", function(agcToken){
                     App.contracts.agcToken = TruffleContract(agcToken);
                     App.contracts.agcToken.setProvider(App.web3Provider);
                     App.contracts.agcToken.deployed().then(function(agcToken){
-                        console.log("AGCToken Address: ",agcToken.address);
+                        console.log("MIDT Address: ",agcToken.address);
                         });
                         App.listenForEvents();
                         return App.render();
@@ -90,10 +90,9 @@ App = {
          //////////Load Token Sale Contract
          App.contracts.tokenSale.deployed().then(function(instance){
              tokenSaleInstance = instance;
-            // console.log("Token Price ",tokenSaleInstance.tokenPrice())
              return tokenSaleInstance.tokenPrice();
          }).then(function(tokenPrice){
-           // console.log("Token Price ",tokenPrice.toNumber());
+            console.log("Token Price ",web3.fromWei(App.tokenPrice, "ether") + " Ether");
            // console.log(web3.fromWei(App.tokenPrice, "ether"));
             App.tokenPrice=tokenPrice.toNumber();
              $('.token-price').html(web3.fromWei(App.tokenPrice, "ether"));
