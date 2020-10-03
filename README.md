@@ -2,7 +2,7 @@
 This is the repo for the Madeindreams Decentralized Traceability Network
 
 
-##Transfer tokens to the ICO contract
+## Transfer tokens to the ICO contract
 
 - Truffle console command for local deployment with ganache
 
