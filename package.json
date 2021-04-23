@@ -1,7 +1,7 @@
 {
-    "name": "erc20-decntralized-traceability",
+    "name": "simple-ico",
     "version": "1.0.0",
-    "description": "Madeindreams Decentralized Traceability App",
+    "description": "A Simple ICO Page",
     "main": "truffle-config.js",
     "directories": {
         "test": "test"
@@ -14,14 +14,12 @@
         "url": "https://https://github.com/Madeindreams/AGC.git"
     },
     "keywords": [],
-    "author": "Ian Dorion <admin@madeindreams.ca> (https://madeindreams.ca)",
+    "author": "Ian Decentralize <admin@madeindreams.ca>",
     "license": "MIT",
     "private": true,
     "bugs": {},
-    "homepage": "https://github.com/Madeindreams/ERC20Token.git",
-    "devDependencies": {
-        "lite-server": "git+https://github.com/Madeindreams/lite-server.git"
-    },
+    "homepage": "https://github.com/Madeindreams/simple-ico.git",
+ 
     "dependencies": {
         "web3": "^1.2.11"
     }
