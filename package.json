@@ -18,7 +18,7 @@
     "license": "MIT",
     "private": true,
     "bugs": {},
-    "homepage": "https://github.com/Madeindreams/simple-ico.git",
+    "homepage": "https://github.com/Madeindreams/simple-ico/",
  
     "dependencies": {
         "web3": "^1.2.11"
