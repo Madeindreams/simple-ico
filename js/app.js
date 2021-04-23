@@ -18,7 +18,9 @@ App = {
             getAccount();
             });
            async function getAccount() {
-            App.account = await ethereum.request({ method: 'eth_requestAccounts' });
+            await window.ethereum.request({ method: 'eth_requestAccounts' })
+            const accounts = await web3.eth.getAccounts()
+            App.account =  await accounts[0]
             ethereum.autoRefreshOnNetworkChange = false;
             ethButton.hide();
             location.reload();
