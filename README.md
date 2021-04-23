@@ -1,4 +1,4 @@
-# Traceability-DApp
+# A Simple ICO
 This is the repo for the Madeindreams Decentralized Traceability Network
 
 
